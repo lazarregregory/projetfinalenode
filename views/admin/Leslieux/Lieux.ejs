@@ -1,0 +1,37 @@
+<%- include ('../includesad/header.ejs') %>
+  <div class="pagelieuxadmin">
+    <div class="titrelieuxadmin">
+      <h1>Lieux</h1>
+
+      <a href="/admin/addlieux">
+        <button class="ui labeled icon button">
+          <i class="plus icon"></i>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              Ajouter Lieux
+            </font>
+          </font>
+        </button>
+      </a>
+    </div>
+    <% for(data of lieux){ %>
+      <div class="cadrelieuxadmin">
+      <div class="cardadmin ">
+
+        <div class="Titre">
+          <%- data.Titre %>
+        </div>
+        <div class="icon">
+          <a href="/admin/lieux/delete?idLieux=<%- data.idLieux %>" onClick=" return confirm('Es tu sur ?')">
+            <i class="trash alternate icon"></i>
+          </a>
+          <a href="/admin/lieux/edit?idLieux=<%- data.idLieux %>"><i class="edit icon"></i></a></th>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <% }; %>
+
+
+    <%- include ('../includesad/footer.ejs') %>

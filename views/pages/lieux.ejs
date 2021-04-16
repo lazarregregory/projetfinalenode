@@ -1,0 +1,49 @@
+<%- include ('../includes/header.ejs') %>
+ <% if(locals.lieuxm) {%>
+    <div>Montagnes</div>
+
+<% for(data of lieuxm ) { %>
+    
+    
+    <div class="ui ">
+        
+       <a href="/lieux/descriptif?idLieux=<%- data.idLieux %>"> 
+            <%- data.Titre %>
+            <img src= "../../public/img/<%- data.Image %>">
+        </a>
+    </div>
+
+<% } %>
+<%}%>
+ <% if(locals.lieuxp) {%>
+    <div>Plages</div>
+
+<% for(data of lieuxp ) { %>
+    
+    
+    <div class="ui ">
+        
+       <a href="/lieux/descriptif?idLieux=<%- data.idLieux %>"> 
+            <%- data.Titre %>
+            <img src="../../img/<%- data.Image %>"/>
+    </div>
+
+<% } %>
+<%}%>
+ <% if(locals.lieuxr) {%>
+    <div>Rivieres</div>
+
+<% for(data of lieuxr ) { %>
+    
+    
+    <div class="ui ">
+        
+       <a href="/lieux/descriptif?idLieux=<%- data.idLieux %>"> 
+            <%- data.Titre %>   
+        </a>
+        <img src="../../img/<%- data.Image %>"/>
+    </div>
+
+<% } %>
+<%}%>
+<%- include ('../includes/footer.ejs') %>

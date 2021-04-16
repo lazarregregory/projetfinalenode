@@ -1,0 +1,50 @@
+<%- include ('./includesad/header.ejs') %>
+<h1>inscrip</h1>
+<form method="post" class="ui form">
+    
+    <div class="field">
+      <label>Nom</label>
+      <input type="text" name="nom" value="<%= ad.Nom %>">
+    </div>
+    <div class="field">
+      <label>Prénom</label>
+      <input type="text" name="prenom" value="<%= ad.Prenom %>">
+    </div>
+    <div class="field">
+        <label>email</label>
+        <input type="email" name="email" value="<%= ad.email %>">
+      </div>
+    <div class="field">
+      <label>Mot de passe</label>
+      <input type="password" name="mdp" value="<%= ad.mdp %>">
+    </div>
+    <div class="field">
+      <label>Confirmer mot de passe</label>
+      <input type="password" name="confirmmdp">
+    </div>
+    
+    <button  class="ui button">Submit</button>
+    <input type="hidden" value="<%= ad.idadmin %>" >
+    
+
+  </form>
+  <a href="/admin">
+      
+    <button class="ui button">Se connecter</button>
+    </a>
+
+  <% if(locals.ermessage) { %>
+
+    <div class="ui red message">
+        <%- ermessage %>
+    </div>
+<% } %>
+
+<% if(locals.rmessage) { %>
+
+  <div class="ui green message">
+      <%- rmessage %>
+  </div>
+<% } %>
+  
+<%- include ('./includesad/footer.ejs') %>

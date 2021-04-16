@@ -1,0 +1,21 @@
+<%- include ('../includes/header.ejs') %>
+
+<h1>descriptif </h1>
+
+<% if(locals.lieux) { %>
+    <%= lieux.Titre %>
+    <img src = "../../img/<%- data.Image %>"/>
+    <%= lieux.Description %>
+<% } %>
+
+
+<% if(locals.activites) { %>
+    <%= activites.Titre %>
+    <img src = "../../img/<%- data.Image %>"/>
+    <%= activites.Description %>
+<% } %>
+
+
+
+
+<%- include ('../includes/footer.ejs') %>

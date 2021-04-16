@@ -1,0 +1,36 @@
+<%- include ('../includesad/header.ejs') %>
+  <div class="pageactivitesadmin">
+    <div class="titreactivitesadmin">
+      <h1>Activites</h1>
+      <a href="/admin/addactivites">
+        <button class="ui labeled icon button">
+          <i class="plus icon"></i>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              Ajouter Activités
+            </font>
+          </font>
+        </button>
+      </a>
+    </div>
+    <% for(data of activites){ %>
+      <div class="cadreactivitesadmin">
+        <div class="cardadmin ">
+
+          <div class="Titre">
+            <%- data.Titre %>
+          </div>
+          <div class="icon">
+            <a href="/admin/activites/delete?idactivites=<%- data.idactivites %>"
+              onClick=" return confirm('Es tu sur ?')">
+              <i class="trash alternate icon"></i>
+            </a>
+            <a href="/admin/activites/edit?idactivites=<%- data.idactivites %>"><i class="edit icon"></i></a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <% }; %>
+    <%- include ('../includesad/footer.ejs') %>

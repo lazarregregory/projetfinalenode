@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/semantic/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ui inverted segment">
+        
+      </div>
+
+<h1>admin</h1>
+
+<form action="/admin" method="POST" class="ui form">
+    <div class="field">
+      <label>Adresse E-mail</label>
+      <input type="email" name="email" >
+    </div>
+    <div class="field">
+      <label>Mot de passe</label>
+      <input type="password" name="mdp">
+    </div>
+    <button class="ui button">Submit</button>
+  
+  </form>
+ 
+  <a href='/admin/inscription'>
+    <button class="ui button" >s'inscrire</button>
+    </a>
+  
+    <% if (locals.message) { %>
+
+      <div class="ui red message">
+          <%- message %>
+      </div>
+  <% } %>
+
+
+<%- include ('./includesad/footer.ejs') %>
