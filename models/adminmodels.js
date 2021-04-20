@@ -156,13 +156,15 @@ class admin {
     })
     }
     static epactivites(req, res) {
-        let params = [
-            req.body,
-            req.query.idactivites,
-        ]
-        console.log("--------eeee----------", params)
+        let params = {
+          image : req.file.originalname,
+          titre : req.body.titre,
+          description : req.body.description,
+        }
+        let id = req.query.idactivites
+        console.log("--------eeee----------", id)
         let up= 'UPDATE activites SET ? WHERE idactivites = ?';
-        connection.query( up, params, (err, result) => {
+        connection.query( up, [params,id], (err, result) => {
             res.redirect('/admin/activites');
             
             
@@ -211,13 +213,17 @@ class admin {
     })
     }
     static eplieux(req, res) {
-        let params = [
-            req.body,
-            req.query.idLieux,
-        ]
-        
+        let params = {
+          idcategorie: req.body.categorie,
+          titre: req.body.titre,
+          image: req.file.originalname,
+          description: req.body.description
+
+        }
+            
+        let id = req.query.idLieux;
         let upd= 'UPDATE lieux SET ? WHERE idLieux = ?';
-        connection.query( upd, params, (err, result) => {
+        connection.query( upd, [params,id], (err, result) => {
             res.redirect('/admin/lieux');
             
         })
