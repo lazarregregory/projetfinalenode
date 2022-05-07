@@ -16,11 +16,11 @@
 
                         <% } %>
         </div>
-        <form method="post" enctype="multipart/form-data" class="ui form" style="width: 70%">
+        <form method="post" action="/admin/postaddlieux" enctype="multipart/form-data" class="ui form" style="width: 70%">
             <div class="field">
                 <label>Categorie</label>
                 <select type="" name="categorie" class="ui search dropdown">
-                    <option value="'<%= lieux.idcategorie %>'">Select Categorie</option>
+                    <option">Select Categorie</option>
                     <option value="1">Montagnes</option>
                     <option value="2">Plages</option>
                     <option value="3">Rivieres</option>
@@ -28,19 +28,23 @@
             </div>
             <div class="field">
                 <label>Titre</label>
-                <input type="text" name="titre" value="<%= lieux.Titre %>">
+                <input type="text" name="titre">
             </div>
+            <% if(locals.admin) { %>
+                <div class="ui red message">
+                    <%= admin.idadmin %>
+                </div>
+                <% } %>
             <div class="field">
                 <label>Image</label>
-                <input type="file" name="image">
-                <%= lieux.Image %></input>
+                <input type="file" name="Image"></input>
             </div>
             <div class="field">
                 <label>Description</label>
-                <textarea type="text" name="description"><%= lieux.Description %></textarea>
+                <textarea type="text" name="description"></textarea>
             </div>
             <button class="ui button">Submit</button>
-            <input type="hidden" value="<%= lieux.idLieux %>">
+            <input type="hidden">
         </form>
     </div>
 

@@ -2,7 +2,7 @@
   <div class="pageactivitesadmin">
     <div class="titreactivitesadmin">
       <h1>Activites</h1>
-      <a href="/admin/addactivites">
+      <a href="/admin/addActivites">
         <button class="ui labeled icon button">
           <i class="plus icon"></i>
           <font style="vertical-align: inherit;">
@@ -13,24 +13,22 @@
         </button>
       </a>
     </div>
-    <% for(data of activites){ %>
+    <% allActivites.forEach(function(data){ %>
       <div class="cadreactivitesadmin">
         <div class="cardadmin ">
 
           <div class="Titre">
-            <%- data.Titre %>
+            <%= data.Titre %>
           </div>
           <div class="icon">
-            <a href="/admin/activites/delete?idactivites=<%- data.idactivites %>"
+            <a href="activites/delete?idactivites=<%= data.idactivites %>"
               onClick=" return confirm('Es tu sur ?')">
               <i class="trash alternate icon"></i>
             </a>
-            <a href="/admin/activites/edit?idactivites=<%- data.idactivites %>"><i class="edit icon"></i></a>
+            <a href="/admin/activites/update?idactivites=<%= data.idactivites %>"><i class="edit icon"></i></a>
           </div>
         </div>
       </div>
   </div>
-
-
-  <% }; %>
+ <% }) %>
     <%- include ('../includesad/footer.ejs') %>

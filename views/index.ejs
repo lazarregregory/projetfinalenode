@@ -1,136 +1,89 @@
 <%- include ('./includes/header.ejs') %>
-<div class="video">
+  <div class="video">
     <h1>Découvrez l'ile vue d'un drone</h1>
-    <video src="rabbit320.webm" controls>
-        <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.webm">lien sur la vidéo</a>.</p>
-      </video>
-</div>
-<div class="theme">
+    <div class="cadragevideo">
+    <iframe width="674" height="281" src="https://www.youtube.com/embed/UoTYNd3luOA" 
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  </div>
+  <div class="theme">
     <h1>LIEUX</h1>
 
 
-  <div class="ui link cards rcadre">
-    <div class="card">
-      <div class="image">
-        <img class="img" src ="../img/montagne1.jpg">
-      </div>
-      <div class="content">
-        <div class="titretheme">MONTAGNES</div>
-        <div class="descript">
-          <p>Venez découvrir </br> des relief a en coupe le souffle</p>
+    <div class="ui link cards rcadre">
+      <div class="card cadrelieux">
+        <div class="image">
+          <img class="img" src="../img/montagne1.jpg">
         </div>
-        <div class="lienlieux">
+        <div class="content">
+          <div class="titretheme">MONTAGNES</div>
+          <div class="descript">
+            <p>Venez découvrir </br> des relief a en coupe le souffle</p>
+          </div>
+          <div class="lienlieux">
             <a href="/lieux/montagnes">Voir nos montagnes</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="image">
-        <img class="img" src="../img/plage 1.jpg">
-      </div>
-      <div class="content">
-        <div class="titretheme">PLAGES</div>
-        <div class="descript">
-           <p> Baignez vous </br> dans des plages paradisiaque</p>
+      <div class="card cadrelieux">
+        <div class="image">
+          <img class="img" src="../img/plage 1.jpg">
         </div>
-        <div class="lienlieux">
+        <div class="content">
+          <div class="titretheme">PLAGES</div>
+          <div class="descript">
+            <p> Baignez vous </br> dans des plages paradisiaque</p>
+          </div>
+          <div class="lienlieux">
             <a href="/lieux/Plages">Voir nos plages</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="image">
-        <img class="img" src="../img/riviere1.jpeg">
-      </div>
-      <div class="content">
-        <div class="titretheme">RIVIERES</div>
-        <div class="descript">
+      <div class="card cadrelieux">
+        <div class="image">
+          <img class="img" src="../img/riviere1.jpeg">
+        </div>
+        <div class="content">
+          <div class="titretheme">RIVIERES</div>
+          <div class="descript">
             <p>Detendez vous </br> avec nos cours d'eau naturelle</p>
-        </div>
-        <div class="lienlieux">
+          </div>
+          <div class="lienlieux">
             <a href="/lieux/Rivieres">Voir nos rivières</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="activitesfront">
-    <h1>ACTIVITES</h1>
-    <div class="act">
-<% for(data of activites) { %>
-    
-    
-    <div class="ui ">
-        
-        <a href="/activites/descriptif?idactivites=<%- data.idactivites %>"> 
-            <%- data.Titre %>
-            <img src = "/img/<%- data.Image %>"/>
-        </a>
+  
+    <div class="titreactivites">
+      <h1>ACTIVITES</h1>
     </div>
-    </div>
-</div>
+    <div class="activitesfront">
+      
+    <% allActivites.forEach(function(data){ %>
+      
+      <section class="carousel">
+        <ul class="carousel-items">
+            <li class="carousel-item">
+                <div class=" ui card card-act">
+                  <img class="imageactimg"src="/img/<%= data.Image %>" />
+                    <div class="card-content card-content-CSS">
+                      <a href="/activites/descriptif?idactivites=<%= data.idactivites %>">
+                        <%= data.Titre %>
+                      </a> 
+                       
+                    </div>
+                </div>
+            </li>
+        </ul>
+      </section>
+  <% }) %>
+  </div>  
 
-<% } %>
 
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
-<h1>bonjour toto tata</h1>
 
-<%- include ('./includes/footer.ejs') %>
-    
+    <%- include ('./includes/footer.ejs') %>

@@ -16,22 +16,27 @@
 
                         <% } %>
         </div>
-            <form method="post" enctype="multipart/form-data" class="ui form" style="width: 70%">
+            <form method="post"  action="/admin/postaddactivites" enctype="multipart/form-data" class="ui form" style="width: 70%">
                 <div class="field">
                     <label>Titre</label>
-                    <input type="text" name="titre" value="<%= activites.Titre %>">
+                    <input type="text" name="titre" >
                 </div>
+                <% if(locals.admin) { %>
+                    <div class="ui red message">
+                        <%= admin.idadmin %>
+                    </div>
+
+                    <% } %>
                 <div class="field">
                     <label>Image</label>
-                    <input type="file" name="image">
-                    <%= activites.Image %></input>
+                    <input type="file" name="Image"></input>
                 </div>
                 <div class="field">
                     <label>Description</label>
-                    <textarea type="textarea" name="description"><%= activites.Description %></textarea>
+                    <textarea type="textarea" name="description"></textarea>
                 </div>
                 <button class="ui button">Submit</button>
-                <input type="hidden" value="<%= activites.idactivites %>">
+                <input type="hidden" >
             </form>
     </div>
                             <%- include ('../includesad/footer.ejs') %>

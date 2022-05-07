@@ -1,28 +1,34 @@
 <%- include ('./includesad/header.ejs') %>
-  <div class="dashboard">
+<a href='/admin/inscription'>
+  <button class="ui button" >Ajouter un ADMIN</button>
+  </a> 
+<a href='/admin/logout'>
+  <button class="ui button" >Deconnexion</button>
+  </a> 
+<div class="dashboard">
     <div class="titredash"><h1>ADMIN</h1>
     </div>
 
-    <% for(data of ad ){ %>
+    <% myAllAdmin.forEach(function(data){ %>
       <div class="ad">
         <div class="admin">
           <div class="nomadmin">
-            <%- data.Nom %>
+            <%= data.Nom %>
           </div>
           <div class="prenomadmin">
-            <%- data.Prenom %>
-              <%- data.idadmin %>
+            <%= data.Prenom %>
+              <%= data.idadmin %>
           </div>
           <div class="iconadmin">
-            <a href="/admin/dashboard/delete?idadmin=<%- data.idadmin %>" onClick=" return confirm('Es tu sur ?')">
+            <a href="/admin/dashboard/delete?idadmin=<%= data.idadmin %>" onClick=" return confirm('Es tu sur ?')">
               <i class="trash alternate icon iconadmin1"></i>
             </a>
-            <a href="/admin/dashboard/edit?idadmin=<%- data.idadmin %>"><i class="edit icon iconadmin1"></i></a>
+            <a href="/admin/dashboard/update?idadmin=<%= data.idadmin %>"><i class="edit icon iconadmin1"></i></a>
           </div>
         </div>
       </div>
   </div>
   
 
-  <% } %>
+  <% }) %>
     <%- include ('./includesad/footer.ejs') %>

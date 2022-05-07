@@ -1,0 +1,30 @@
+<%- include ('../includes/header.ejs') %>
+
+<h1>descriptif </h1>
+
+
+
+<% if(locals.myOne) { %>
+    <%= myOne.Titre %>
+    <img src = "../img/<%- myOne.Image %>"/>
+    <%= myOne.Description %>
+    
+<% } %>
+
+<% if(locals.validmessage) { %>
+
+    <div class="ui green message">
+        <%- validmessage %>
+    </div>
+    <% } %>
+        <% if(locals.errormessage) { %>
+            <div class="ui red message">
+                <%- errormessage %>
+            </div>
+
+            <% } %>
+
+
+
+
+<%- include ('../includes/footer.ejs') %>

@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="ui inverted segment">
-        
+        <h1>GUIDE TOURISTIQUE ADMINISTRATEUR</h1>
       </div>
 
-<h1>admin</h1>
+<h1>admin connectez vous</h1>
 
-<form action="/admin" method="POST" class="ui form">
+<form action="/admin/login" method="POST" class="ui form" style="width: 70%">
     <div class="field">
       <label>Adresse E-mail</label>
       <input type="email" name="email" >
@@ -24,13 +24,15 @@
       <label>Mot de passe</label>
       <input type="password" name="mdp">
     </div>
-    <button class="ui button">Submit</button>
-  
+    <button class="ui labeled icon button">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">
+          Se connecter
+        </font>
+      </font>
+    </button>
   </form>
  
-  <a href='/admin/inscription'>
-    <button class="ui button" >s'inscrire</button>
-    </a>
   
     <% if (locals.message) { %>
 

@@ -1,50 +1,69 @@
 <%- include ('../includes/header.ejs') %>
- <% if(locals.lieuxm) {%>
-    <div>Montagnes</div>
 
-<% for(data of lieuxm ) { %>
-    
-    
-    <div class="ui ">
-        
-       <a href="/lieux/descriptif?idLieux=<%- data.idLieux %>"> 
-            <%- data.Titre %>
-            <img src= "../../public/img/<%- data.Image %>">
-        </a>
-    </div>
+    <% if(locals.allMontagnes) {%>
+        <div class="CSSpagelieux">
+            <H1>Montagnes</H1>
+            <div class="cadrepagelieux">
+                <% for(data of allMontagnes) { %>
 
-<% } %>
-<%}%>
- <% if(locals.lieuxp) {%>
-    <div>Plages</div>
+                    <div class="ui card clieux">
+                        <img class="imglieux" src="../img/<%- data.Image %>">
+                        <div class="card-content clieux2">
+                            <a href="/lieux/descriptif?idLieux=<%- data.idLieux %>">
+                                <%- data.Titre %>
+                            </a>
 
-<% for(data of lieuxp ) { %>
-    
-    
-    <div class="ui ">
-        
-       <a href="/lieux/descriptif?idLieux=<%- data.idLieux %>"> 
-            <%- data.Titre %>
-            <img src="../../img/<%- data.Image %>"/>
-       </a>
-    </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    <%}%>
 
-<% } %>
-<%}%>
- <% if(locals.lieuxr) {%>
-    <div>Rivieres</div>
 
-<% for(data of lieuxr ) { %>
-    
-    
-    <div class="ui ">
-        
-       <a href="/lieux/descriptif?idLieux=<%- data.idLieux %>"> 
-            <%- data.Titre %>   
-        </a>
-        <img src="../../img/<%- data.Image %>"/>
-    </div>
+    <% if(locals.allPlages) {%>
+        <div class="CSSpagelieux">
+                    <H1>Plages</H1>
+                    <div class="cadrepagelieux">
+                        <% for(data of allPlages ) { %>
 
-<% } %>
-<%}%>
-<%- include ('../includes/footer.ejs') %>
+                            <div class="ui card clieux">
+                                <img class="imglieux" src="../img/<%- data.Image %>">
+                                <div class="card-content clieux2">
+                                    <a href="/lieux/descriptif?idLieux=<%- data.idLieux %>">
+                                        <%- data.Titre %>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <% } %>
+                    </div>
+        </div>
+    <%}%>
+
+
+    <% if(locals.allRivieres) {%>
+        <div class="CSSpagelieux">
+                            <H1>Montagnes</H1>
+                            <div class="cadrepagelieux">
+                                <% for(data of allRivieres ) { %>
+
+                                    <div class="ui card clieux">
+                                        <img class="imglieux" src="../img/<%- data.Image %>">
+                                        <div class="card-content clieux2">
+                                            <a href="/lieux/descriptif?idLieux=<%- data.idLieux %>">
+                                                <%- data.Titre %>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <% } %>
+                            </div>
+        </div>
+    <%}%>
+
+
+
+
+
+                            <%- include ('../includes/footer.ejs') %>

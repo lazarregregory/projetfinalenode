@@ -1,38 +1,44 @@
-<%- include ('./includesad/header.ejs') %>
-<h1>inscrip</h1>
-<form method="post" class="ui form">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/semantic/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ui inverted segment">
+        ENTRER VOS INFORMATIONS
+      </div>
+  <div class="formpageadmin2" style="padding-left: 20px">
+<h1>Veuillez remplir</h1>
+<form method="post" action="/admin/postinscription" class="ui form">
     
     <div class="field">
       <label>Nom</label>
-      <input type="text" name="nom" value="<%= ad.Nom %>">
+      <input type="text" name="nom">
     </div>
     <div class="field">
       <label>Prénom</label>
-      <input type="text" name="prenom" value="<%= ad.Prenom %>">
+      <input type="text" name="prenom">
     </div>
     <div class="field">
         <label>email</label>
-        <input type="email" name="email" value="<%= ad.email %>">
+        <input type="email" name="email">
       </div>
     <div class="field">
       <label>Mot de passe</label>
-      <input type="password" name="mdp" value="<%= ad.mdp %>">
-    </div>
-    <div class="field">
-      <label>Confirmer mot de passe</label>
-      <input type="password" name="confirmmdp">
+      <input type="password" name="mdp">
     </div>
     
-    <button  class="ui button">Submit</button>
-    <input type="hidden" value="<%= ad.idadmin %>" >
+    <button  class="ui button">Valider</button>
+    <input type="hidden">
     
 
   </form>
-  <a href="/admin">
-      
-    <button class="ui button">Se connecter</button>
-    </a>
-
+</div>
   <% if(locals.ermessage) { %>
 
     <div class="ui red message">

@@ -14,24 +14,25 @@
         </button>
       </a>
     </div>
-    <% for(data of lieux){ %>
+    <% allLieux.forEach(function(data){ %>
+
       <div class="cadrelieuxadmin">
       <div class="cardadmin ">
 
         <div class="Titre">
-          <%- data.Titre %>
+          <%= data.Titre %>
         </div>
         <div class="icon">
-          <a href="/admin/lieux/delete?idLieux=<%- data.idLieux %>" onClick=" return confirm('Es tu sur ?')">
+          <a href="/admin/lieux/delete?idLieux=<%= data.idLieux %>" onClick=" return confirm('Es tu sur ?')">
             <i class="trash alternate icon"></i>
           </a>
-          <a href="/admin/lieux/edit?idLieux=<%- data.idLieux %>"><i class="edit icon"></i></a></th>
+          <a href="/admin/lieux/update?idLieux=<%= data.idLieux %>"><i class="edit icon"></i></a></th>
         </div>
       </div>
   </div>
 </div>
 
-  <% }; %>
+  <% }) %>
 
 
     <%- include ('../includesad/footer.ejs') %>

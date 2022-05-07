@@ -1,0 +1,38 @@
+<%- include ('../includesad/header.ejs') %>
+    <div class="formpageadmin" style="padding-left: 20px">
+        <div class="titreformadmin">
+            <h1>add Activités</h1>
+
+            <% if(locals.message) { %>
+
+                <div class="ui green message">
+                    <%- message %>
+                </div>
+                <% } %>
+                    <% if(locals.errmessage) { %>
+                        <div class="ui red message">
+                            <%- errmessage %>
+                        </div>
+
+                        <% } %>
+        </div>
+            <form method="post" action="/activites/postupdate" enctype="multipart/form-data" class="ui form" style="width: 70%">
+                <div class="field">
+                    <label>Titre</label>
+                    <input type="text" name="titre" value="<%- updateAct.Titre %>">
+                </div>
+                    <% } %>
+                <div class="field">
+                    <label>Image</label>
+                    <input type="text" name="image" value="<%= updateAct.Image %>"></input>
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <textarea type="textarea" name="description" value="<%= updateAct.Description %>"></textarea>
+                </div>
+                <button class="ui button">Submit</button>
+                <input type="hidden" >
+            </form>
+    </div>
+    
+                            <%- include ('../includesad/footer.ejs') %>

@@ -4,16 +4,11 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const bodyParser = require('body-parser');
-const connection = require('./config/databConnect');
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 
 dotenv.config({ path: './.env' });
 
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-    if (error) throw error;
-    console.log('The solution is: ', results[0].solution);
-  });
 
 
 app.set('view engine', 'ejs')

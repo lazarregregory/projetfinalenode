@@ -1,26 +1,31 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .cadre{ 
     border: 1px solid black; 
     background-color: black;
     opacity: 0.7;
  }
-.imgheader {
-    background : no-repeat center / 100%  url(../img/d.jpg);
+
+.ban {
     width: 100%;
-    height: 77%;
-   
+    height: 600px;
+}
+.banheader {
+    width: 100%;
+    height: 626px;
 }
 .cadre2 {
-    padding-top: 307px;
-    padding-left: 150px;
-
+    position: relative;
+    bottom: 300px;
+    left: 80px;
+    height: 250px;
 }
+
 .cadre {
-    Width:423px;
-    Height:211px;
+    Width:35%;
+    Height:250px;
     font-weight: bold;
     font-size: 45px;
     display: flex;
@@ -30,12 +35,15 @@ body {
 }
 .cadre p {
     line-height: 0;
-    color:white
+    color:white;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
 }
-.nav {
-    position: fixed;
-    top : 0;
     
+    
+
+.nav {
     width: 100%;
     height: 94px;
 }
@@ -44,8 +52,29 @@ header a {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
 }
+/* ------------------Video----------------------------- */
+iframe {
+    width: 65%;
+    height: 550px;
+}
+.cadragevideo {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.video {
+    padding-top: 50px;
+}
 
-.card {
+/* -----------------------------lieux page index---------------------------- */
+.theme {
+    padding-top: 50px;
+}
+.activitesfront {
+    padding-top: 40px;
+    display: flex;
+}
+.cadrelieux {
     width: 25% !important;
     height: 580px !important;
 }
@@ -53,7 +82,8 @@ header a {
     display: flex !important;
     justify-content: space-around !important;
     width: 100%;
-    margin: 0px !important
+    margin: 0px !important;
+    padding-top: 40px;
 }
 .img {
     width: 100% !important;
@@ -75,4 +105,157 @@ header a {
 }
 .lienlieux {
     font-size: 20px;
+}
+
+/* -------------------------ACTIVITES page index----------------- */
+
+
+.titreactivites {
+    padding-top: 50px;
+}
+.activitesfront{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding: 1rem 0;
+}
+.activitesfront{
+    margin-left: 1rem;
+}
+.activitesfront {
+    flex: 1 0 450px;
+    margin-left: 1rem;
+}
+.carousel-item {
+    height: 216px;
+}
+.card-act {
+    height: 100%;
+
+}
+.imageactimg {
+    height: 172px;
+}
+ul {
+    list-style-type: none;
+}
+.card-content-CSS {
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    padding-left: 20px;
+}
+
+
+
+/* ------------------lieux page lieux----------------------------- */
+.cadrepagelieux {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+   
+}
+.CSSpagelieux h1 {
+    text-align: center;
+    font-size: 40px;
+}
+.CSSpagelieux{
+    height: 800px;
+}
+.clieux2 {
+    
+    height: 80px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    
+}
+.ui.card {
+    margin:0
+}
+.imglieux {
+    height: 240px !important;
+}
+
+.clieux {
+    
+    width: 35% !important;
+    margin-top: 30px ! important;
+    
+}
+/* ------------------FOOTER----------------------------- */
+.banfooter{
+    background-color: black;
+    width: 100%;
+    height: 600px;
+    padding-top: 30px;
+    margin-top: 100px;
+}
+.banfooter img {
+    width: 74%;
+    height: 533px;
+
+}
+.imgfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0px;
+    
+}
+.textimgfooter {
+    position:absolute;
+    text-align: center;
+}
+
+.textimgfooter h1 {
+    font-size: 85px !important;
+    color: white;
+    padding-bottom: 65px;
+}
+.rsociaux {
+    width: 100%;
+    height: 10%;
+    background-color: white;
+}
+.footercontact {
+    width: 100%;
+    height: 21%;
+    display: flex;
+    justify-content: space-between;
+}
+.reseausociale {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    
+}
+.logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imglogo {
+    width: 50%;
+    height: 70%;
+}
+.iconcont {
+    width: 50%;
+    height: 70%;
+
+}
+.tailleicon {
+    width: 20%;
+}
+.formpageadmin2 {
+    padding-left: 20px;
+    padding-right: 150px;
+    
 }
